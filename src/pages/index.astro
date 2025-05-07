@@ -1,0 +1,46 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Landing from "../components/landing/Landing.astro";
+import { AstroSeo } from "@astrolib/seo";
+---
+
+
+<AstroSeo
+  title="KAISER Dnevna Ponuda"
+  description="KAISER Dnevna Ponuda"
+  canonical="https://ponuda.restoran-kaiser.com"
+  openGraph={{
+    url: "https://ponuda.restoran-kaiser.com",
+    title: "KAISER Dnevna Ponuda",
+    description: "KAISER Dnevna Ponuda",
+    images: [
+      {
+        url: "/images/riba.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Social open graph",
+        type: "image/jpeg",
+      },
+      {
+        url: "/images/riba.jpg",
+        width: 4096,
+        height: 4096,
+        alt: "Twitter open graph",
+        type: "image/jpeg",
+      },
+      { url: "https://ponuda.restoran-kaiser.com/images/riba.jpg" },
+      { url: "https://ponuda.restoran-kaiser.com/images/riba.jpg" },
+    ],
+    site_name: "KAISER Dnevna Ponuda",
+  }}
+  twitter={{
+    handle: "@RestoranKaiser",
+    site: "@site",
+    cardType: "Fish",
+  }}
+/>
+<BaseLayout>
+  <div class="2xl:max-w-7xl mx-auto">
+    <Landing />
+  </div>
+</BaseLayout>

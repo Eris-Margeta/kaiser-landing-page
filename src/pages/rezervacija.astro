@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProductDetails from "../components/store/ProductDetails.astro";
+import { AstroSeo } from "@astrolib/seo";
+---
+
+<AstroSeo
+  title="Rezervacije - Kaiser"
+  description="Rezervacija večere u Kaiseru"
+  canonical="https://ponuda.restoran-kaiser.com/reservation"
+  openGraph={{
+    url: "https://ponuda.restoran-kaiser.com",
+    title: "Rezervacije - Kaiser",
+    description: "Rezervacija večere u Kaiseru",
+    images: [
+      {
+        url: "/images/riba.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Social open graph",
+        type: "image/jpeg",
+      },
+      {
+        url: "/images/riba.jpg",
+        width: 4096,
+        height: 4096,
+        alt: "Twitter open graph",
+        type: "image/jpeg",
+      },
+      { url: "https://ponuda.restoran-kaiser.com/images/riba.jpg" },
+      { url: "https://ponuda.restoran-kaiser.com/images/riba.jpg" },
+    ],
+    site_name: "Rezervacije - Kaiser",
+  }}
+  twitter={{
+    handle: "@RestoranKaiser",
+    site: "@site",
+    cardType: "Fish",
+  }}
+/>
+<BaseLayout>
+  <ProductDetails />
+</BaseLayout>

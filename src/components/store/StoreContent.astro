@@ -1,0 +1,90 @@
+---
+import { store } from "../../data/store.json";
+import { storefirst } from "../../data/storefirst.json";
+import { Picture } from "astro-imagetools/components";
+---
+<section>
+	<div
+		class="grid grid-cols-1 lg:grid-cols-1 gap-x-3 gap-y-24 max-w-2xl mx-auto"
+	>
+		{
+			storefirst.map((template) => (
+				<>
+					<a href={template.link}>
+						<div>
+							<div class="overflow-hidden object-cover h-full w-full rounded-xl">
+								<Picture
+									src={template.image}
+									alt={template.name}
+									sizes="(min-width: 400px) 800px, 100vw"
+									placeholder="blurred"
+									loading="eager"
+									format="avif"
+									decoding="async"
+									fit="cover"
+									quality={20}
+									layout="constrained"
+								/>
+							</div>
+							<div>
+								<div class=" inline-flex items-center justify-between w-full">
+									<div>
+										<h2 class="  relative inline-block underline decoration-sky-900 text-xl font-semibold text-black dark:text-white mt-4 font-display">
+											{">"}
+											{template.name}
+											<span class="absolute h-1 bg-current bottom-0 animate-underline-slide" />
+										</h2>
+
+										<p class="relative z-10 mt-2 text-sm text-zinc-500 dark:text-zinc-400">
+											{template.description}
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</>
+			))
+		}
+    
+		{
+			store.map((template) => (
+				<>
+					<a href={template.link}>
+						<div>
+							<div class="overflow-hidden object-cover h-full w-full rounded-xl">
+								<Picture
+									src={template.image}
+									alt={template.name}
+									sizes="(min-width: 400px) 800px, 100vw"
+									placeholder="blurred"
+									loading="lazy"
+									format="avif"
+									decoding="async"
+									fit="cover"
+									quality={20}
+									layout="constrained"
+								/>
+							</div>
+							<div>
+								<div class=" inline-flex items-center justify-between w-full">
+									<div>
+										<h2 class="  relative inline-block underline decoration-sky-900 text-xl font-semibold text-black dark:text-white mt-4 font-display">
+											{">"}
+											{template.name}
+											<span class="absolute h-1 bg-current bottom-0 animate-underline-slide" />
+										</h2>
+
+										<p class="relative z-10 mt-2 text-sm text-zinc-500 dark:text-zinc-400">
+											{template.description}
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				</>
+			))
+		}
+	</div>
+</section>

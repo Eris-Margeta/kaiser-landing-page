@@ -1,0 +1,23 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/global/Footer.astro";
+---
+
+<html lang="hr">
+	<head>
+		<BaseHead />
+	</head>
+
+	<body class="dark bg-black">
+		<noscript
+			><iframe
+				src="https://www.googletagmanager.com/ns.html?id=GTM-N7LM67X"
+				height="0"
+				width="0"
+				style="display:none;visibility:hidden"></iframe></noscript
+		>
+
+		<slot />
+		<Footer />
+	</body>
+</html>

@@ -1,0 +1,78 @@
+---
+import Marquee from "../global/Marquee.astro";
+import StoreContent from "../store/StoreContent.astro";
+import Navigation from "../global/Navigation.astro";
+import { Image } from '@astrojs/image/components';
+import ksvg from '../../assets/ksvg.svg';
+import signature from '../../assets/signature_mario.svg'
+---
+
+<section id="main">
+
+ <div class="fixed bottom-4 lg:right-1/4 right-4 z-50">
+  <a href="/rezervacija">
+    <button class="h-14 w-auto mr-2 font-regular flex items-center justify-center bg-black bg-opacity-75 backdrop-blur-md border-2 border-zinc-900 border-opacity-50 rounded-full shadow-golden text-white px-4 py-2 text-sm focus:outline-none hover:bg-black hover:text-white hover:shadow-3xl hover:border-zinc-800">
+      <Image src={ksvg} alt="Kaiser Logo" width={40} height={40} fit="outside" loading="eager" />
+      Online Rezervacije
+    </button>
+  </a>
+</div>
+
+  
+  
+  
+
+  <Navigation/>
+  <div class="mx-auto max-w-7xl px-8 py-12 lg:py-32">
+    <div class="space-y-24">
+      <div class="space-y-24">
+        <div class="max-w-3xl mx-auto">
+          <h1
+            class="text-4xl lg:text-6xl font-display text-black dark:text-white uppercase">
+            Dnevna ponuda<br>u Kaiseru
+          </h1>
+        
+        <br>
+        
+          <h2 class="text-xl lg:text-4xl font-display text-black dark:text-zinc-400 uppercase">
+            Po vrhunskoj cijeni
+          </h2>
+        
+          <Marquee />
+        </div>
+        <StoreContent />
+        
+        <div
+          class="mt-6 space-y-6 text-zinc-500 dark:text-zinc-400 max-w-3xl mx-auto">
+          <h3 class="text-3xl lg:text-3xl font-display text-black dark:text-white uppercase max-w-min">A Word From The Owner</h3>
+          <p class="max-w-prose">
+          
+            Težimo biti pristupačan restoran koji nudi samo najbolje i najsvježije namirnice u cjenovnom rangu dostupnom svima.
+          
+          </p>
+          <p class="max-w-prose">
+            
+            Vjerujemo da ako želite istinski doživjeti Hrvatsku i njezinu kulturu, morate doživjeti njenu hranu i vino u izvornom obliku.
+          
+          </p>
+          
+          <p>
+            
+          
+          <div class="float-right max-w-[50ch] mr-18 pr-18">
+          <p class="text-md lg:text-md font-display text-black dark:text-white uppercase float-right mr-10">Mario Meštrović</p> </br>
+          <span class="float-right">
+          <Image src={signature} alt="Mario Meštrović potpis" 
+          
+          width={150}
+          height={50}/>
+        </span>
+        </div>
+            
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
